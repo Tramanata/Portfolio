@@ -3,16 +3,16 @@ import { Canvas } from "@react-three/fiber";
 import { MotionConfig } from "framer-motion";
 import { Leva } from "leva";
 import { useEffect, useState, useCallback } from "react";
-import { Experience } from "./components/Experience";
-import { Interface } from "./components/Interface";
+import { HomeScreen } from "./pages/HomeScreen";
+import { Interface } from "./components/scene/Interface";
 import { Menu } from "./components/Menu";
 import { framerMotionConfig } from "./config";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import './components/styles.css';
-import About from "./components/About";
-import Projects from "./components/Projects";
-import ProfessionalExperience from "./components/ProfessionalExperience";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import ProfessionalExperience from "./pages/ProfessionalExperience";
+import Health from "./pages/Health";
 
 function AppContent() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -48,7 +48,7 @@ function AppContent() {
                     "push":{ "particles_nb":4 }, "remove":{ "particles_nb":2 } } }, "retina_detect":true}}
           />
           <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
-            <Experience section={0} menuOpened={menuOpened} />
+            <HomeScreen section={0} menuOpened={menuOpened} />
           </Canvas>
           <Interface />
           <Menu
@@ -64,6 +64,7 @@ function AppContent() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<ProfessionalExperience />} />
+        <Route path="/health" element={<Health />} />
       </Routes>
     </MotionConfig>
   );

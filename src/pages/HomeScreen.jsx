@@ -8,10 +8,10 @@ import { animate, useMotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { useEffect } from "react";
 import { framerMotionConfig } from "../config";
-import { Avatar } from "./Avatar";
-import { Office } from "./Office";
+import { Avatar } from "../components/scene/Avatar";
+import { Office } from "../components/scene/Office";
 
-// Must match the phone breakpoint for .hero-card in styles.css.
+// Must match the phone breakpoint for .hero-card in global.css.
 const NARROW_BREAKPOINT = 640;
 // Approximate height the docked hero card takes up on narrow screens.
 const CARD_SPACE = 260;
@@ -21,7 +21,7 @@ const NARROW_SHIFT_X = 0.12;
 // fraction of the viewport height. The camera pulls back when it won't fit.
 const ROOM_WIDTH_RATIO = 0.9;
 
-export const Experience = (props) => {
+export const HomeScreen = (props) => {
   const { section, menuOpened } = props;
   const { size, camera } = useThree();
 
@@ -37,7 +37,7 @@ export const Experience = (props) => {
     });
   }, [menuOpened]);
 
-  // On narrow screens the hero card docks to the bottom (see styles.css), so
+  // On narrow screens the hero card docks to the bottom (see global.css), so
   // fit the room into the space above it: shift the view up by half the
   // card's height and pull the camera back to match that area's shape.
   const narrow = size.width <= NARROW_BREAKPOINT;
