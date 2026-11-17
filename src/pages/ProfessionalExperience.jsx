@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Menu } from "./Menu";
-import "./styles.css";
+import { Menu } from "../components/Menu";
 
 const jobs = [
   {

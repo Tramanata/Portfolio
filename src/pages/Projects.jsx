@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import { Menu } from "./Menu";
-import "./styles.css";
+import { Menu } from "../components/Menu";
 
 import esvehicle from "../assets/pictures/esvehicle.png";
 
 // `image` is optional; cards without one render text-only.
 const projects = [
+    {
+    title: "OpenScalers",
+    context: "Creator of Openscalers",
+    description:
+      "Open-source tools for building, monitoring, and managing distributed compute infrastructure.",
+    tech: ["Go", "Distributed-Systems", "Docker", "PostgreSQL", "REST-API", "Prometheus"],
+    links: [
+      { label: "GitHub", href: "https://github.com/Openscalers-dev/opencompute" },
+    ],
+  },
   {
     title: "OnDeviceNav",
     context: "Senior design · NC State",

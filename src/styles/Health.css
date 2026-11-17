@@ -1,0 +1,174 @@
+.health {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 120px 32px 80px;
+  font-family: "Inter", sans-serif;
+}
+
+.health-header {
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+
+.health-eyebrow {
+  margin: 0 0 16px;
+  color: #a64b33;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.health-title {
+  margin: 0 0 20px;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.health-description {
+  margin: 0;
+  color: #5c534b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.health-overview {
+  margin-bottom: 48px;
+  padding: 24px 0;
+  border-top: 1px solid #cfc3b3;
+  border-bottom: 1px solid #cfc3b3;
+}
+
+.health-overview-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.health-overview-heading h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.health-overview-heading span {
+  color: #786b60;
+  font-size: 11px;
+}
+
+.health-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 28px 0 0;
+}
+
+.health-metrics dt {
+  color: #786b60;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.health-metrics dd {
+  margin: 10px 0 0;
+  color: #2a2420;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.health-tabs {
+  display: flex;
+  gap: 28px;
+  border-bottom: 1px solid #cfc3b3;
+}
+
+.health-tabs button {
+  position: relative;
+  padding: 0 0 16px;
+  border: 0;
+  background: transparent;
+  color: #786b60;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+.health-tabs button:hover {
+  color: #2a2420;
+}
+
+.health-tabs button[aria-pressed="true"] {
+  color: #a64b33;
+}
+
+.health-tabs button[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: #a64b33;
+}
+
+.health-tabs button:focus-visible {
+  outline: 2px solid #a64b33;
+  outline-offset: 5px;
+}
+
+.health-activity {
+  padding-top: 32px;
+}
+
+.health-activity h2 {
+  margin: 0 0 24px;
+  color: #2a2420;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.health-placeholder {
+  padding: 24px 0;
+}
+
+.health-placeholder p {
+  margin: 0;
+  color: #786b60;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .health {
+    padding: 104px 24px 56px;
+  }
+
+  .health-metrics {
+    gap: 16px;
+  }
+
+  .health-tabs {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .health-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .health-tabs button {
+    transition: none;
+  }
+}

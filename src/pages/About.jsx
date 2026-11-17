@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu } from "./Menu";
-import "./styles.css";
+import { Menu } from "../components/Menu";
 
 import aboutPhoto from "../assets/pictures/about-photo.jpg";
 
@@ -55,17 +54,27 @@ function About() {
         <h2>Things I'm Proud Of</h2>
         <ul>
           <li>
+            I am the Creator of OpenScalers, an open-source tool that allows developers to manage their
+            own hardware like a Hyperscaler. This is my most recent and largest project. Check it out: {" "} 
+            <ExternalLink href="https://github.com/Openscalers-dev/opencompute">
+               OpenScalers
+            </ExternalLink>
+          </li>
+          <li>
             I founded <strong>Chariot</strong>, a rideshare app, and took it from an idea to the{" "}
             <ExternalLink href="https://apps.apple.com/us/app/ride-chariot/id6760150604">
               App Store
             </ExternalLink>
             . It now serves 100+ active users.
           </li>
-          <li>
-            I led a team of five on our senior design project, an AR indoor navigation app that runs
-            entirely on the phone to help people with visual or mobility impairments.
+          <li>I graduated magna cum laude in Computer Engineering from NC State University and 
+            was recently accepted into Georgia Tech Online Computer Science Masters Program specializing
+            in Computational Perception and Robotics.
           </li>
-          <li>I graduated magna cum laude in Computer Engineering from NC State University.</li>
+          <li>
+            I remain super active and race in multiple races every year. I recently ran in the Charlotte
+            Half Marathon with my Dad and will be running in the Nashville Rock and Roll Marathon in April.
+          </li>
           <li>The circle of people I've built around me.</li>
         </ul>
 

@@ -1,0 +1,134 @@
+.race-list {
+  border-top: 1px solid #cfc3b3;
+  font-family: "Inter", sans-serif;
+}
+
+.race-list .race-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid #cfc3b3;
+}
+
+.race-card .race-card__meta {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #786b60;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.race-card .race-card__name {
+  margin: 8px 0 0;
+  color: #2a2420;
+  font-size: clamp(18px, 3vw, 23px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+
+.race-card .race-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.race-card .race-card__links:empty {
+  display: none;
+}
+
+.race-card .race-card__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #786b60;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.race-card .race-card__links a:hover {
+  color: #b5543a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.race-card .race-card__links a:focus-visible {
+  outline: 2px solid #b5543a;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+.race-card__result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.race-card__time {
+  color: #2a2420;
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.race-card__label {
+  color: #786b60;
+  font-size: 11px;
+}
+
+.race-list-empty {
+  color: #786b60;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .race-list .race-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px 0;
+  }
+
+  .race-card__result {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .race-card .race-card__links a {
+    transition: none;
+  }
+}
+
+.race-expand {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 16px;
+  border: 1px solid #cfc3b3;
+  border-radius: 8px;
+  background: transparent;
+  color: #5c534b;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.race-expand:hover {
+  background: #efe7dc;
+}
+
+.race-expand:focus-visible {
+  outline: 2px solid #b5543a;
+  outline-offset: 4px;
+}

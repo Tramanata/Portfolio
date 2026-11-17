@@ -1,0 +1,47 @@
+export const races = [
+  {
+    id: "charlotte-half-marathon-2026",
+    name: "2026 Charlotte Half Marathon",
+    distance: "13.1 miles",
+    time: "2:08:39",
+    date: "November 14, 2026",
+    link: "https://results.raceroster.com/v3/events/e5kbhszx7m2nxjc7/race/385289/participant/xc4xrnw5xcuyucw5?filter_search=tyler+ramanata",
+    stravalink: "https://www.strava.com/activities/20985409825/overview"
+  },
+  {
+    id: "wilmington-half",
+    name: "2026 Wilmington Half Marathon",
+    distance: "13.1 miles",
+    time: "2:24:25",
+    date: "February 28, 2026",
+    link: "https://runsignup.com/Race/Results/3095/IndividualResult/TsKq?resultSetId=630596#U102359496",
+    stravalink: "https://www.strava.com/activities/17554244303/overview",
+  },
+  {
+    id: "charlotte-half-ruck",
+    name: "2025 Charlotte Half Marathon - 20lbs Rucking",
+    distance: "13.1 miles",
+    time: "2:17:58",
+    date: "November 15, 2025",
+    link: "https://results.raceroster.com/v3/events/3vgp2qeac5c9rhab/race/248068/participant/sukqymmstqrxgr2x",
+    stravalink: "https://www.strava.com/activities/16466220564/overview",
+  },
+  {
+    id: "copenhagen-marathon",
+    name: "2025 Copenhagen Marathon",
+    distance: "26.2 miles",
+    time: "4:24:28",
+    date: "May 11, 2025",
+    link: "http://live.ultimate.dk/desktop/front/?eventid=6591&pid=21767 ",
+    stravalink: "https://www.strava.com/activities/14446061807/overview",
+  },
+  {
+    id: "lyngby-half",
+    name: "2025 Lyngby Half Marathon",
+    distance: "13.1 miles",
+    time: "1:55:36",
+    date: "April 27, 2025",
+    link: "http://live.ultimate.dk/desktop/front/?eventid=6756&pid=21952 ",
+    stravalink: "https://www.strava.com/activities/14300297827/overview",
+  },
+];
