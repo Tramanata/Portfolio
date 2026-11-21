@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu } from "../components/Menu";
 
 import esvehicle from "../assets/pictures/esvehicle.png";
+import chariotlogo from "../assets/pictures/chariot-logo.png"
 
 // `image` is optional; cards without one render text-only.
 const projects = [
@@ -35,6 +36,7 @@ const projects = [
     description:
       "A ride-share app I founded and launched on the App Store, now serving 100+ active users. Riders and drivers get matched in real time, with live location, maps, and per-driver ride queues.",
     tech: ["TypeScript", "React Native", "Expo", "Supabase"],
+    image: chariotlogo,
     links: [{ label: "App Store", href: "https://apps.apple.com/us/app/ride-chariot/id6760150604" }],
   },
   {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu } from "../components/Menu";
 import RunningSection from "../components/health/running/RunningSection";
+import HikingSection from "../components/health/hiking/HikingSection";
 import OverallSection from "../components/health/OverallSection";
 import "../styles/Health.css";
 
@@ -8,7 +9,7 @@ const activities = ["Overall", "Running", "Hiking", "Climbing"];
 
 export default function Health() {
   const [menuOpened, setMenuOpened] = useState(false);
-  const [activeActivity, setActiveActivity] = useState("Overall", "Running");
+  const [activeActivity, setActiveActivity] = useState("Overall", "Running", "Hiking");
 
   return (
     <div className="page">
@@ -51,13 +52,7 @@ export default function Health() {
         >
           {activeActivity === "Overall" && <OverallSection />}
           {activeActivity === "Running" && <RunningSection />}
-
-          {activeActivity === "Hiking" && (
-            <div className="health-placeholder">
-              <h2>Taking the scenic route.</h2>
-              <p>Hikes and trail adventures coming soon.</p>
-            </div>
-          )}
+          {activeActivity === "Hiking" && <HikingSection />}
 
           {activeActivity === "Climbing" && (
             <div className="health-placeholder">
